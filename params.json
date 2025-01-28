@@ -89,7 +89,7 @@
       "exportSavedModels": false,
       "exportManagedFolders": false,
       "exportModelEvaluationStores": false,
-      "exportProjectResources": true,
+      "exportProjectResources": false,
       "exportLabelingTasks": false,
       "exportAllInputDatasets": false,
       "exportAllDatasets": false,
@@ -108,10 +108,6 @@
           "type": "UploadedFiles"
         },
         {
-          "name": "target_feedback",
-          "type": "UploadedFiles"
-        },
-        {
           "name": "customers_data_all",
           "type": "UploadedFiles"
         }
@@ -122,12 +118,7 @@
           "name": "Prediction"
         }
       ],
-      "includedModelEvaluationStores": [
-        {
-          "id": "6annFluF",
-          "name": "eval_store"
-        }
-      ],
+      "includedModelEvaluationStores": [],
       "includedManagedFolders": [],
       "includedCodeStudios": [],
       "includedKnowledgeBanks": [],
