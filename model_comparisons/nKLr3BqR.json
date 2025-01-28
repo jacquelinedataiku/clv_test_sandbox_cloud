@@ -1,0 +1,72 @@
+{
+    "displayName": "Compare 2 models from Predict target",
+    "predictionType": "BINARY_CLASSIFICATION",
+    "comparedModels": [
+        {
+            "smartId": "A-*-N0Wl5OAd-VOKvGvhU-s3-pp2-m1",
+            "isSelected": true,
+            "color": "#1f77b4",
+            "isChampion": false
+        },
+        {
+            "smartId": "A-*-N0Wl5OAd-VOKvGvhU-s3-pp1-m1",
+            "isSelected": true,
+            "color": "#ff7f0e",
+            "isChampion": false
+        }
+    ],
+    "displayParams": {
+        "displayedMetrics": [
+            "ACCURACY",
+            "PRECISION",
+            "RECALL",
+            "F1",
+            "COST_MATRIX",
+            "LOG_LOSS",
+            "ROC_AUC",
+            "CALIBRATION_LOSS",
+            "CUMULATIVE_LIFT",
+            "DATA_DRIFT"
+        ],
+        "predictionType": "BINARY_CLASSIFICATION",
+        "pinnedMetrics": [
+            "ROC_AUC"
+        ],
+        "xLabel": "model:date",
+        "yLabels": [
+            "model:algorithm",
+            "evaluation:date",
+            "evaluationDataset:dataset-name"
+        ],
+        "alsoDisplayedLabels": [],
+        "barLabels": [
+            "evaluation:date",
+            "model:name",
+            "evaluationDataset:dataset-name"
+        ],
+        "graphStyle": "BAR",
+        "sortColumn": "",
+        "sortDescending": false,
+        "showConfidenceIntervals": true,
+        "disabledMERunIds": []
+    },
+    "versionTag": {
+        "versionNumber": 4,
+        "lastModifiedBy": {
+            "login": "sciaravino"
+        },
+        "lastModifiedOn": 1680896070538
+    },
+    "creationTag": {
+        "versionNumber": 0,
+        "lastModifiedBy": {
+            "login": "sciaravino"
+        },
+        "lastModifiedOn": 1680896069527
+    },
+    "tags": [],
+    "customFields": {},
+    "checklists": {
+        "checklists": []
+    }
+}

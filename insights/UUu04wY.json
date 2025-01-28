@@ -1,0 +1,102 @@
+{
+  "type": "eda",
+  "params": {
+    "card": {
+      "type": "correlation_matrix",
+      "heatmapParams": {
+        "showValues": true,
+        "showColors": true,
+        "showAbsValues": false,
+        "threshold": 0.0
+      },
+      "metric": "SPEARMAN",
+      "columns": [
+        {
+          "name": "since_birth_days",
+          "type": "CONTINUOUS"
+        },
+        {
+          "name": "price_first_item_purchased",
+          "type": "CONTINUOUS"
+        },
+        {
+          "name": "revenue",
+          "type": "CONTINUOUS"
+        },
+        {
+          "name": "pages_visited",
+          "type": "CONTINUOUS"
+        },
+        {
+          "name": "is_id_ends_d",
+          "type": "CONTINUOUS"
+        },
+        {
+          "name": "target",
+          "type": "CONTINUOUS"
+        }
+      ],
+      "id": "iCPt310"
+    },
+    "dataSpec": {
+      "inputDatasetSmartName": "train_test",
+      "datasetSelection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false,
+          "uiData": {
+            "mode": "\u0026\u0026",
+            "conditions": [
+              {
+                "input": "customer_id",
+                "operator": "contains",
+                "col": "since_birth_days",
+                "num": 0.0
+              }
+            ]
+          }
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "RANDOM_FIXED_RATIO",
+        "maxRecords": 100000,
+        "targetRatio": 0.5,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": true,
+      "refreshTrigger": 2,
+      "containerSelection": {
+        "containerMode": "INHERIT"
+      }
+    }
+  },
+  "owner": "admin",
+  "listed": true,
+  "name": "Correlation matrix on 6 variables  (Spearman)",
+  "dashboardCreationId": "3uUzaMa",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1604116494662
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1604116494662
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

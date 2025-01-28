@@ -1,0 +1,205 @@
+{
+  "rebuildBehavior": "EXPLICIT",
+  "name": "eval_store",
+  "metrics": {
+    "probes": [],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "ascending": true,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "partition": "NP",
+      "columns": [],
+      "metrics": []
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [
+      {
+        "type": "numericRange",
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "softMinimum": 0.8,
+        "softMaximum": 0.0,
+        "minimumEnabled": false,
+        "maximumEnabled": false,
+        "softMinimumEnabled": true,
+        "softMaximumEnabled": false,
+        "metricId": "model_perf:ACCURACY",
+        "autoComputeMetric": false,
+        "meta": {
+          "name": "Value in range",
+          "label": "Accuracy Check"
+        },
+        "displayName": "",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": true,
+        "enabled": true
+      },
+      {
+        "type": "numericRange",
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.7,
+        "minimumEnabled": false,
+        "maximumEnabled": false,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": true,
+        "metricId": "model_perf:DATA_DRIFT",
+        "autoComputeMetric": false,
+        "meta": {
+          "name": "Value in range",
+          "label": "Drift Check"
+        },
+        "displayName": "",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": true,
+        "enabled": true
+      }
+    ],
+    "displayedState": {
+      "partition": "NP",
+      "checks": [
+        "Accuracy Check",
+        "Drift Check"
+      ]
+    }
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "displayParams": {
+    "displayedMetrics": [
+      "pages_visited_KS",
+      "price_first_item_purchased_KS",
+      "age_KS",
+      "pages_visited_PSI",
+      "ip_country_code_PSI",
+      "gender_PSI",
+      "campain_PSI",
+      "price_first_item_purchased_PSI",
+      "age_PSI",
+      "ip_country_code_Chi-square",
+      "gender_Chi-square",
+      "campain_Chi-square",
+      "ACCURACY",
+      "PRECISION",
+      "RECALL",
+      "F1",
+      "COST_MATRIX",
+      "LOG_LOSS",
+      "ROC_AUC",
+      "CALIBRATION_LOSS",
+      "CUMULATIVE_LIFT",
+      "DATA_DRIFT"
+    ],
+    "allAvailableMetrics": [
+      "ACCURACY",
+      "PRECISION",
+      "RECALL",
+      "F1",
+      "COST_MATRIX",
+      "ROC_AUC",
+      "CUMULATIVE_LIFT",
+      "AVERAGE_PRECISION",
+      "LOG_LOSS",
+      "CALIBRATION_LOSS",
+      "DATA_DRIFT",
+      "DATA_DRIFT_PVALUE",
+      "MIN_KS",
+      "MIN_CHISQUARE",
+      "MAX_PSI",
+      "PREDICTION_DRIFT_PSI",
+      "PREDICTION_DRIFT_CHISQUARE",
+      "pages_visited_KS",
+      "price_first_item_purchased_KS",
+      "age_KS",
+      "pages_visited_PSI",
+      "ip_country_code_PSI",
+      "gender_PSI",
+      "campain_PSI",
+      "price_first_item_purchased_PSI",
+      "age_PSI",
+      "ip_country_code_Chi-square",
+      "gender_Chi-square",
+      "campain_Chi-square"
+    ],
+    "predictionType": "BINARY_CLASSIFICATION",
+    "pinnedMetrics": [],
+    "xLabel": "evaluation:date",
+    "yLabels": [
+      "model:name",
+      "evaluationDataset:dataset-name"
+    ],
+    "alsoDisplayedLabels": [],
+    "barLabels": [
+      "evaluation:date",
+      "model:name",
+      "evaluationDataset:dataset-name"
+    ],
+    "graphStyle": "LINE",
+    "sortColumn": "refStr",
+    "sortDescending": false,
+    "showConfidenceIntervals": true,
+    "disabledMERunIds": []
+  },
+  "governSyncOptOut": false,
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "sciaravino"
+    },
+    "lastModifiedOn": 1680843124365
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "tags": {
+    "duplicated": {
+      "color": "#3A85AD"
+    },
+    "in-progrress": {},
+    "Subject matter:Manufacturing": {
+      "color": "#123883"
+    },
+    "Subject matter:Healthcare": {
+      "color": "#77bec2"
+    },
+    "owner:Salvatore Ciaravino": {
+      "color": "#9060e0"
+    },
+    "deleted-recipe-editor": {},
+    "Model Train": {},
+    "recipe-editor": {},
+    "imported": {
+      "color": "#263238"
+    },
+    "Subject matter:Financial Services": {
+      "color": "#28aadd"
+    },
+    "Hands-on workshop": {
+      "color": "#0f6d82"
+    },
+    "Subject matter:Retail": {
+      "color": "#1ac2ab"
+    }
+  }
+}

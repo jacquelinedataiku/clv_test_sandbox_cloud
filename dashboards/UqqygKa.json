@@ -1,0 +1,39 @@
+{
+  "checklists": {
+    "checklists": []
+  },
+  "columnNumber": 36,
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1656438999912,
+    "versionNumber": 0
+  },
+  "customFields": {},
+  "listed": false,
+  "name": "Andy Main's dashboard",
+  "owner": "amain",
+  "pages": [
+    {
+      "enableCrossFilters": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
+      },
+      "grid": {
+        "tiles": []
+      },
+      "id": "9ZL2fX2",
+      "showTitle": false
+    }
+  ],
+  "showGrid": true,
+  "tags": [],
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1656438999912,
+    "versionNumber": 0
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "checklists": {
+    "checklists": []
+  },
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1647601582604,
+    "versionNumber": 0
+  },
+  "customFields": {},
+  "dashboardCreationId": "3uUzaMa",
+  "listed": false,
+  "name": "New chart on train_test",
+  "owner": "amain",
+  "params": {
+    "datasetSmartName": "train_test",
+    "def": {
+      "animationDimension": [],
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "chartHeight": 200,
+      "colorMeasure": [],
+      "colorOptions": {
+        "ccScaleMode": "NORMAL",
+        "colorPalette": "default",
+        "customColors": {},
+        "customPalette": {
+          "colors": [],
+          "fixedValues": false,
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "values": []
+        },
+        "heatDensityMapIntensity": 0.5,
+        "heatDensityMapRadius": 0.5,
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0,
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "singleColor": "#2678B1",
+        "transparency": 0.75
+      },
+      "computeMode": "NORMAL",
+      "disableSafetyLimits": false,
+      "displayXAxis": true,
+      "displayYAxis": true,
+      "facetDimension": [],
+      "fillOpacity": 0.6,
+      "filters": [],
+      "genericDimension0": [],
+      "genericDimension1": [],
+      "genericMeasures": [],
+      "geometry": [
+        {
+          "adminLevel": 0,
+          "column": "ip_geopoint",
+          "isA": "ua",
+          "treatAsAlphanum": false,
+          "type": "GEOPOINT"
+        }
+      ],
+      "groupDimension": [],
+      "hexbinNumber": 20,
+      "hexbinRadius": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "includeZero": true,
+      "legendPlacement": "OUTER_RIGHT",
+      "mapGridOptions": {
+        "gridLatDeg": 0.5,
+        "gridLonDeg": 0.5
+      },
+      "mapOptions": {
+        "lockSquareGrid": false,
+        "tilesLayer": "cartodb-positron"
+      },
+      "multiTooltips": false,
+      "name": "New chart",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "showInChartLabels": true,
+      "showInChartValues": false,
+      "showLegend": true,
+      "showXAxis": false,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "singleXAxis": true,
+      "sizeMeasure": [],
+      "smoothing": true,
+      "strokeWidth": 1,
+      "thumbnailData": "data:image/png;base64,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",
+      "tooltipMeasures": [],
+      "type": "scatter_map",
+      "uaColor": [
+        {
+          "adminLevel": 0,
+          "column": "revenue",
+          "isA": "ua",
+          "treatAsAlphanum": false,
+          "type": "NUMERICAL"
+        }
+      ],
+      "uaShape": [],
+      "uaSize": [],
+      "uaTooltip": [],
+      "uaXDimension": [],
+      "uaYDimension": [],
+      "useLiveProcessingIfAvailable": true,
+      "userEditedName": false,
+      "valuesInChartDisplayOptions": {
+        "displayMode": "VALUES",
+        "displayValues": false
+      },
+      "variant": "normal",
+      "xAxisFormatting": {
+        "customExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "displayAxis": true,
+        "isLogScale": false,
+        "showAxisTitle": true
+      },
+      "xAxisMode": "NORMAL",
+      "xCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "xDimension": [],
+      "xMeasure": [],
+      "yAxesFormatting": [
+        {
+          "customExtent": {
+            "editMode": "AUTO",
+            "manualExtent": [
+              null,
+              null
+            ]
+          },
+          "displayAxis": true,
+          "isLogScale": false,
+          "showAxisTitle": true
+        }
+      ],
+      "yAxisMode": "NORMAL",
+      "yCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "yDimension": [],
+      "yMeasure": []
+    },
+    "engineType": "LINO",
+    "maxDataBytes": 157286400,
+    "refreshableSelection": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": 10000,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "targetRatio": 0.02,
+        "useMemTable": false,
+        "withinFirstN": -1
+      }
+    }
+  },
+  "tags": [],
+  "type": "chart",
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1647601582604,
+    "versionNumber": 0
+  }
+}

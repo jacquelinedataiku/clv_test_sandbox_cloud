@@ -1,0 +1,29 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "WE1mmMLD"
+  },
+  "owner": "amain",
+  "listed": false,
+  "name": "Full report of model Prediction",
+  "dashboardCreationId": "3uUzaMa",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1647604909179
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1647604909179
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

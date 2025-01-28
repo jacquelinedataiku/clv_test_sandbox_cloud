@@ -1,0 +1,436 @@
+{
+  "type": "S3",
+  "managed": true,
+  "featureGroup": false,
+  "formatType": "csv",
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "formatParams": {
+    "style": "escape_only_no_quote",
+    "charset": "utf8",
+    "separator": "\t",
+    "quoteChar": "\"",
+    "escapeChar": "\\",
+    "maxRowChars": 100000000,
+    "arrayItemSeparator": "\u0002",
+    "mapKeySeparator": "\u0003",
+    "dateSerializationFormat": "HIVE",
+    "arrayMapFormat": "hive",
+    "hiveSeparators": [
+      "\u0002",
+      "\u0003",
+      "\u0004",
+      "\u0005",
+      "\u0006",
+      "\u0007",
+      "\b"
+    ],
+    "skipRowsBeforeHeader": 0,
+    "parseHeaderRow": false,
+    "skipRowsAfterHeader": 0,
+    "probableNumberOfRecords": 0,
+    "normalizeBooleans": false,
+    "normalizeDoubles": true,
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readMissingColumnsBehavior": "DISCARD_SILENT",
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "fileReadFailureBehavior": "FAIL",
+    "compress": ""
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1604086542213
+  },
+  "tags": [],
+  "params": {
+    "bucket": "se-sandbox-us",
+    "metastoreSynchronizationEnabled": true,
+    "metastoreDatabaseName": "dataiku",
+    "metastoreTableName": "${projectKey}_dataset",
+    "connection": "dataiku-managed-storage",
+    "path": "/ssYv203d2akci6aocmBLIzAN/${projectKey}/dataset",
+    "notReadyIfEmpty": false,
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    },
+    "variablesExpansionLoopConfig": {
+      "enabled": false,
+      "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
+      "replacements": []
+    }
+  },
+  "schema": {
+    "columns": [
+      {"name":"customer_id","type":"string"},
+      {"name":"age","type":"bigint"},
+      {"name":"price_first_item_purchased","type":"double"},
+      {"name":"gender","type":"string"},
+      {"name":"revenue","type":"double"},
+      {"name":"original_dataset","type":"string"},
+      {"name":"ip","type":"string"},
+      {"name":"ip_geopoint","type":"string"},
+      {"name":"ip_country_code","type":"string"},
+      {"name":"pages_visited","type":"double"},
+      {"name":"campain","type":"boolean"},
+      {"name":"is_id_ends_d","type":"bigint"},
+      {"name":"target","type":"double"}
+    ],
+    "userModified": true
+  },
+  "dkuProperties": [],
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "col_stats",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Columns statistics",
+          "level": 2
+        },
+        "configuration": {
+          "aggregates": [
+            {
+              "column": "customer_id",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "customer_id",
+              "aggregated": "MAX"
+            },
+            {
+              "column": "customer_id",
+              "aggregated": "COUNT_NULL"
+            },
+            {
+              "column": "since_birth_days",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "since_birth_days",
+              "aggregated": "MEAN"
+            },
+            {
+              "column": "since_birth_days",
+              "aggregated": "MAX"
+            },
+            {
+              "column": "since_birth_days",
+              "aggregated": "COUNT_NULL"
+            },
+            {
+              "column": "price_first_item_purchased",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "price_first_item_purchased",
+              "aggregated": "MEAN"
+            },
+            {
+              "column": "price_first_item_purchased",
+              "aggregated": "MAX"
+            },
+            {
+              "column": "price_first_item_purchased",
+              "aggregated": "COUNT_NULL"
+            },
+            {
+              "column": "gender",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "gender",
+              "aggregated": "MAX"
+            },
+            {
+              "column": "gender",
+              "aggregated": "COUNT_NULL"
+            },
+            {
+              "column": "revenue",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "revenue",
+              "aggregated": "MAX"
+            },
+            {
+              "column": "revenue",
+              "aggregated": "COUNT_NULL"
+            },
+            {
+              "column": "original_dataset",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "original_dataset",
+              "aggregated": "MAX"
+            },
+            {
+              "column": "original_dataset",
+              "aggregated": "COUNT_NULL"
+            },
+            {
+              "column": "ip",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "ip",
+              "aggregated": "MAX"
+            },
+            {
+              "column": "ip",
+              "aggregated": "COUNT_NULL"
+            }
+          ]
+        }
+      },
+      {
+        "type": "adv_col_stats",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Most frequent values",
+          "level": 3
+        },
+        "configuration": {
+          "aggregates": [
+            {
+              "column": "customer_id",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "customer_id",
+              "aggregated": "TOP10"
+            },
+            {
+              "column": "since_birth_days",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "since_birth_days",
+              "aggregated": "TOP10"
+            },
+            {
+              "column": "price_first_item_purchased",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "price_first_item_purchased",
+              "aggregated": "TOP10"
+            },
+            {
+              "column": "gender",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "gender",
+              "aggregated": "TOP10"
+            },
+            {
+              "column": "revenue",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "revenue",
+              "aggregated": "TOP10"
+            },
+            {
+              "column": "original_dataset",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "original_dataset",
+              "aggregated": "TOP10"
+            },
+            {
+              "column": "ip",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "ip",
+              "aggregated": "TOP10"
+            },
+            {
+              "column": "target",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "target",
+              "aggregated": "TOP10"
+            }
+          ],
+          "numberTopValues": 10
+        }
+      },
+      {
+        "type": "percentile_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Columns percentiles",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "verify_col",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Data validity",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "ascending": true,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "partition": "NP",
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS",
+        "col_stats:MEAN:price_first_item_purchased",
+        "col_stats:MEAN:since_birth_days",
+        "col_stats:COUNT_NULL:customer_id",
+        "col_stats:COUNT_NULL:gender",
+        "col_stats:COUNT_NULL:ip",
+        "col_stats:COUNT_NULL:original_dataset",
+        "col_stats:COUNT_NULL:price_first_item_purchased",
+        "col_stats:COUNT_NULL:revenue",
+        "col_stats:COUNT_NULL:since_birth_days",
+        "adv_col_stats:MODE:gender",
+        "adv_col_stats:MODE:original_dataset",
+        "adv_col_stats:MODE:target"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "monitor": true,
+    "checks": [
+      {
+        "type": "numericRange",
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": false,
+        "maximumEnabled": true,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "metricId": "col_stats:COUNT_NULL:revenue",
+        "autoComputeMetric": false,
+        "meta": {
+          "name": "Value in range",
+          "label": "Revenue Missing"
+        },
+        "id": "Revenue Missing",
+        "displayName": "Revenue Missing",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": false,
+        "enabled": false
+      }
+    ],
+    "displayedState": {
+      "partition": "NP",
+      "checks": []
+    }
+  },
+  "customFields": {}
+}

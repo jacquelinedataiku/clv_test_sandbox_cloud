@@ -1,0 +1,198 @@
+{
+  "name": "PredictionService",
+  "endpoints": [
+    {
+      "modelRef": "WE1mmMLD",
+      "useJava": false,
+      "computePropensity": false,
+      "outputExplanations": true,
+      "individualExplanationParams": {
+        "method": "ICE",
+        "nbExplanations": 3,
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
+      },
+      "mlFlowOutputStyle": "RAW",
+      "testQueries": [
+        {
+          "name": "to_score #2",
+          "q": {
+            "features": {
+              "campain": false,
+              "customer_id": "49587b0b4aa",
+              "gender": "F",
+              "ip": "149.141.47.50",
+              "ip_country_code": "US",
+              "ip_geopoint": "POINT(-97.822 37.751)",
+              "is_id_ends_d": 0,
+              "original_dataset": "to_score",
+              "pages_visited": 8,
+              "price_first_item_purchased": 28,
+              "since_birth_days": 35
+            }
+          }
+        },
+        {
+          "name": "to_score #3",
+          "q": {
+            "features": {
+              "campain": true,
+              "customer_id": "5cdbeab2fba",
+              "gender": "F",
+              "ip": "161.35.97.107",
+              "ip_country_code": "US",
+              "ip_geopoint": "POINT(-97.822 37.751)",
+              "is_id_ends_d": 0,
+              "original_dataset": "to_score",
+              "pages_visited": 5,
+              "price_first_item_purchased": 42,
+              "since_birth_days": 120
+            }
+          }
+        },
+        {
+          "q": {
+            "features": {}
+          }
+        },
+        {
+          "name": "to_score #1",
+          "q": {
+            "features": {
+              "customer_id": "88789ebaf5a",
+              "since_birth_days": 31,
+              "price_first_item_purchased": 10,
+              "gender": "F",
+              "original_dataset": "to_score",
+              "ip": "41.189.149.136",
+              "ip_geopoint": "POINT(-5 8)",
+              "ip_country_code": "CI",
+              "pages_visited": 7,
+              "campain": false,
+              "is_id_ends_d": 0
+            },
+            "explanations": {
+              "enabled": true,
+              "method": "ICE",
+              "nExplanations": 3
+            }
+          }
+        }
+      ],
+      "enrichMapping": [
+        {
+          "datasetRef": "customers_data_all_prepared",
+          "packagingType": "BUNDLED_TOCONNECTION",
+          "on": [],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {}
+        }
+      ],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "predict",
+      "type": "STD_PREDICTION",
+      "openAPI": {
+        "title": "predict",
+        "content": "{\n  \"paths\" : {\n    \"/predict/predict\" : {\n      \"post\" : {\n        \"summary\" : \"predict endpoint\",\n        \"description\" : \"Prediction type: STD_PREDICTION\",\n        \"parameters\" : [ {\n          \"in\" : \"body\",\n          \"description\" : \"The input payload for executing the real-time machine learning service.\",\n          \"required\" : true,\n          \"schema\" : {\n            \"$ref\" : \"#/definitions/predict_EndpointInput\"\n          }\n        } ],\n        \"responses\" : {\n          \"200\" : {\n            \"description\" : \"The service processed the input correctly and provided a result prediction, if applicable.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/predict_EndpointOutput\"\n            }\n          },\n          \"default\" : {\n            \"description\" : \"The service failed to execute due to an error.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/predict_ErrorResponse\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"definitions\" : {\n    \"predict_EndpointInput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"features\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"pages_visited\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"ip_country_code\" : {\n              \"type\" : \"string\"\n            },\n            \"gender\" : {\n              \"type\" : \"string\"\n            },\n            \"campain\" : {\n              \"type\" : \"boolean\"\n            },\n            \"since_birth_days\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"price_first_item_purchased\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"ip\" : {\n              \"type\" : \"string\"\n            },\n            \"is_id_ends_d\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"ip_geopoint\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"predict_EndpointOutput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"result\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"prediction\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"predict_ErrorResponse\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"status_code\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"message\" : {\n          \"type\" : \"string\"\n        }\n      }\n    }\n  }\n}",
+        "enabled": false,
+        "isManual": false
+      }
+    },
+    {
+      "modelRef": "WE1mmMLD",
+      "useJava": true,
+      "computePropensity": false,
+      "outputExplanations": false,
+      "individualExplanationParams": {
+        "method": "ICE",
+        "nbExplanations": 3,
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
+      },
+      "mlFlowOutputStyle": "RAW",
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "PredictCLV",
+      "type": "STD_PREDICTION",
+      "openAPI": {
+        "title": "PredictCLV",
+        "content": "{\n  \"paths\" : {\n    \"/PredictCLV/predict\" : {\n      \"post\" : {\n        \"summary\" : \"PredictCLV endpoint\",\n        \"description\" : \"Prediction type: STD_PREDICTION\",\n        \"parameters\" : [ {\n          \"in\" : \"body\",\n          \"description\" : \"The input payload for executing the real-time machine learning service.\",\n          \"required\" : true,\n          \"schema\" : {\n            \"$ref\" : \"#/definitions/PredictCLV_EndpointInput\"\n          }\n        } ],\n        \"responses\" : {\n          \"200\" : {\n            \"description\" : \"The service processed the input correctly and provided a result prediction, if applicable.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/PredictCLV_EndpointOutput\"\n            }\n          },\n          \"default\" : {\n            \"description\" : \"The service failed to execute due to an error.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/PredictCLV_ErrorResponse\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"definitions\" : {\n    \"PredictCLV_EndpointInput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"features\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"pages_visited\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"ip_country_code\" : {\n              \"type\" : \"string\"\n            },\n            \"gender\" : {\n              \"type\" : \"string\"\n            },\n            \"campain\" : {\n              \"type\" : \"boolean\"\n            },\n            \"since_birth_days\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"price_first_item_purchased\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"ip\" : {\n              \"type\" : \"string\"\n            },\n            \"is_id_ends_d\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"ip_geopoint\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"PredictCLV_EndpointOutput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"result\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"prediction\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"PredictCLV_ErrorResponse\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"status_code\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"message\" : {\n          \"type\" : \"string\"\n        }\n      }\n    }\n  }\n}",
+        "enabled": false,
+        "isManual": false
+      }
+    },
+    {
+      "modelRef": "WE1mmMLD",
+      "useJava": true,
+      "computePropensity": false,
+      "outputExplanations": false,
+      "individualExplanationParams": {
+        "method": "ICE",
+        "nbExplanations": 3,
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
+      },
+      "mlFlowOutputStyle": "RAW",
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "PredictCustomerLV",
+      "type": "STD_PREDICTION",
+      "openAPI": {
+        "title": "PredictCustomerLV",
+        "content": "{\n  \"paths\" : {\n    \"/PredictCustomerLV/predict\" : {\n      \"post\" : {\n        \"summary\" : \"PredictCustomerLV endpoint\",\n        \"description\" : \"Prediction type: STD_PREDICTION\",\n        \"parameters\" : [ {\n          \"in\" : \"body\",\n          \"description\" : \"The input payload for executing the real-time machine learning service.\",\n          \"required\" : true,\n          \"schema\" : {\n            \"$ref\" : \"#/definitions/PredictCustomerLV_EndpointInput\"\n          }\n        } ],\n        \"responses\" : {\n          \"200\" : {\n            \"description\" : \"The service processed the input correctly and provided a result prediction, if applicable.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/PredictCustomerLV_EndpointOutput\"\n            }\n          },\n          \"default\" : {\n            \"description\" : \"The service failed to execute due to an error.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/PredictCustomerLV_ErrorResponse\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"definitions\" : {\n    \"PredictCustomerLV_EndpointInput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"features\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"pages_visited\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"ip_country_code\" : {\n              \"type\" : \"string\"\n            },\n            \"gender\" : {\n              \"type\" : \"string\"\n            },\n            \"campain\" : {\n              \"type\" : \"boolean\"\n            },\n            \"since_birth_days\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"price_first_item_purchased\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"ip\" : {\n              \"type\" : \"string\"\n            },\n            \"is_id_ends_d\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"ip_geopoint\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"PredictCustomerLV_EndpointOutput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"result\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"prediction\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"PredictCustomerLV_ErrorResponse\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"status_code\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"message\" : {\n          \"type\" : \"string\"\n        }\n      }\n    }\n  }\n}",
+        "enabled": false,
+        "isManual": false
+      }
+    },
+    {
+      "modelRef": "WE1mmMLD",
+      "useJava": true,
+      "computePropensity": false,
+      "outputExplanations": false,
+      "individualExplanationParams": {
+        "method": "ICE",
+        "nbExplanations": 3,
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
+      },
+      "mlFlowOutputStyle": "RAW",
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "CommunityTest",
+      "type": "STD_PREDICTION",
+      "openAPI": {
+        "title": "CommunityTest",
+        "content": "{\n  \"paths\" : {\n    \"/CommunityTest/predict\" : {\n      \"post\" : {\n        \"summary\" : \"CommunityTest endpoint\",\n        \"description\" : \"Prediction type: STD_PREDICTION\",\n        \"parameters\" : [ {\n          \"in\" : \"body\",\n          \"description\" : \"The input payload for executing the real-time machine learning service.\",\n          \"required\" : true,\n          \"schema\" : {\n            \"$ref\" : \"#/definitions/CommunityTest_EndpointInput\"\n          }\n        } ],\n        \"responses\" : {\n          \"200\" : {\n            \"description\" : \"The service processed the input correctly and provided a result prediction, if applicable.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/CommunityTest_EndpointOutput\"\n            }\n          },\n          \"default\" : {\n            \"description\" : \"The service failed to execute due to an error.\",\n            \"schema\" : {\n              \"$ref\" : \"#/definitions/CommunityTest_ErrorResponse\"\n            }\n          }\n        }\n      }\n    }\n  },\n  \"definitions\" : {\n    \"CommunityTest_EndpointInput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"features\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"pages_visited\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"ip_country_code\" : {\n              \"type\" : \"string\"\n            },\n            \"gender\" : {\n              \"type\" : \"string\"\n            },\n            \"campain\" : {\n              \"type\" : \"boolean\"\n            },\n            \"since_birth_days\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"price_first_item_purchased\" : {\n              \"type\" : \"number\",\n              \"format\" : \"double\"\n            },\n            \"ip\" : {\n              \"type\" : \"string\"\n            },\n            \"is_id_ends_d\" : {\n              \"type\" : \"integer\",\n              \"format\" : \"int32\"\n            },\n            \"ip_geopoint\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"CommunityTest_EndpointOutput\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"result\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"prediction\" : {\n              \"type\" : \"string\"\n            }\n          }\n        }\n      }\n    },\n    \"CommunityTest_ErrorResponse\" : {\n      \"type\" : \"object\",\n      \"properties\" : {\n        \"status_code\" : {\n          \"type\" : \"integer\",\n          \"format\" : \"int32\"\n        },\n        \"message\" : {\n          \"type\" : \"string\"\n        }\n      }\n    }\n  }\n}",
+        "enabled": false,
+        "isManual": false
+      }
+    }
+  ],
+  "authMethod": "PUBLIC",
+  "authRealm": {
+    "queryKeys": []
+  },
+  "deploymentMonitoring": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

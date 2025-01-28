@@ -1,0 +1,29 @@
+{
+  "type": "scenario_run_button",
+  "params": {
+    "scenarioSmartId": "AUTOMATE"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Run scenario",
+  "dashboardCreationId": "3uUzaMa",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1604122913342
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1604122913342
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

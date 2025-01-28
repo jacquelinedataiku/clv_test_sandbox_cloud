@@ -1,0 +1,77 @@
+{
+    "displayName": "CLVComparison",
+    "predictionType": "BINARY_CLASSIFICATION",
+    "comparedModels": [
+        {
+            "smartId": "S-*-WE1mmMLD-1639083596935",
+            "isSelected": true,
+            "color": "#1f77b4",
+            "isChampion": false
+        },
+        {
+            "smartId": "S-*-WE1mmMLD-1604117563496",
+            "isSelected": true,
+            "color": "#ff7f0e",
+            "isChampion": false
+        },
+        {
+            "smartId": "S-*-WE1mmMLD-initial",
+            "isSelected": true,
+            "color": "#2ca02c",
+            "isChampion": false
+        }
+    ],
+    "displayParams": {
+        "displayedMetrics": [
+            "ACCURACY",
+            "PRECISION",
+            "RECALL",
+            "F1",
+            "COST_MATRIX",
+            "LOG_LOSS",
+            "ROC_AUC",
+            "CALIBRATION_LOSS",
+            "CUMULATIVE_LIFT"
+        ],
+        "predictionType": "BINARY_CLASSIFICATION",
+        "pinnedMetrics": [
+            "ROC_AUC"
+        ],
+        "xLabel": "model:date",
+        "yLabels": [
+            "model:algorithm",
+            "evaluation:date",
+            "evaluationDataset:dataset-name"
+        ],
+        "alsoDisplayedLabels": [],
+        "barLabels": [
+            "evaluation:date",
+            "model:name",
+            "evaluationDataset:dataset-name"
+        ],
+        "graphStyle": "BAR",
+        "sortColumn": "",
+        "sortDescending": false,
+        "showConfidenceIntervals": true,
+        "disabledMERunIds": []
+    },
+    "versionTag": {
+        "versionNumber": 7,
+        "lastModifiedBy": {
+            "login": "rparikh"
+        },
+        "lastModifiedOn": 1648211086833
+    },
+    "creationTag": {
+        "versionNumber": 0,
+        "lastModifiedBy": {
+            "login": "eirwin"
+        },
+        "lastModifiedOn": 1640019228518
+    },
+    "tags": [],
+    "customFields": {},
+    "checklists": {
+        "checklists": []
+    }
+}

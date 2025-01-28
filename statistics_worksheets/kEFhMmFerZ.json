@@ -1,0 +1,438 @@
+{
+  "dataSpec": {
+    "inputDatasetSmartName": "dataset",
+    "datasetSelection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "ordering": {
+        "enabled": false,
+        "rules": []
+      },
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "maxRecords": 100000,
+      "targetRatio": 0.02,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1
+    },
+    "autoRefreshSample": true,
+    "refreshTrigger": 0,
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "rootCard": {
+    "type": "worksheet_root",
+    "confidenceLevel": 0.95,
+    "showConfidenceInterval": false,
+    "cards": [
+      {
+        "type": "correlation_matrix",
+        "heatmapParams": {
+          "showValues": true,
+          "showColors": true,
+          "showAbsValues": false,
+          "threshold": 0.0,
+          "filterVariablesWithoutValues": false
+        },
+        "metric": "SPEARMAN",
+        "columns": [
+          {
+            "name": "revenue",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "is_id_ends_d",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "target",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "since_birth_days",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "price_first_item_purchased",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "pages_visited",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "id": "tW86xNw"
+      },
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "showCumulativeDistributionFunction": false,
+        "xColumns": [
+          {
+            "name": "campain",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "gender",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "is_id_ends_d",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "original_dataset",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "target",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "campain",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "campain",
+                  "type": "CATEGORICAL"
+                },
+                "id": "qV41sZy"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "campain",
+                  "type": "CATEGORICAL"
+                },
+                "id": "H2fpVGM"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "campain",
+                  "type": "CATEGORICAL"
+                },
+                "id": "GmWTULe"
+              }
+            ],
+            "id": "pFd4nok"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "gender",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "gender",
+                  "type": "CATEGORICAL"
+                },
+                "id": "KttD1qm"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "gender",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Y5xxLEe"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "gender",
+                  "type": "CATEGORICAL"
+                },
+                "id": "BAnfyvB"
+              }
+            ],
+            "id": "Xjaeedd"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "is_id_ends_d",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "is_id_ends_d",
+                  "type": "CATEGORICAL"
+                },
+                "id": "4vl8jZl"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "is_id_ends_d",
+                  "type": "CATEGORICAL"
+                },
+                "id": "RTHafuR"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "is_id_ends_d",
+                  "type": "CATEGORICAL"
+                },
+                "id": "GFf7iM6"
+              }
+            ],
+            "id": "e1SI45j"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "original_dataset",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "original_dataset",
+                  "type": "CATEGORICAL"
+                },
+                "id": "eE017V3"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "original_dataset",
+                  "type": "CATEGORICAL"
+                },
+                "id": "0lohDIr"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "original_dataset",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Kx2G4Pt"
+              }
+            ],
+            "id": "F1r14CL"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "target",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "target",
+                  "type": "CATEGORICAL"
+                },
+                "id": "VQGxCPp"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "target",
+                  "type": "CATEGORICAL"
+                },
+                "id": "3eM35VO"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "target",
+                  "type": "CATEGORICAL"
+                },
+                "id": "0LQNcOk"
+              }
+            ],
+            "id": "WqDHdlo"
+          }
+        ],
+        "id": "QrweBej"
+      }
+    ],
+    "id": "Sg0xyg0"
+  },
+  "name": "Worksheet",
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1647603207932
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1647603191203
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

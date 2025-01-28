@@ -1,0 +1,31 @@
+{
+  "type": "jupyter",
+  "params": {
+    "notebookSmartName": "Correlations analysis on train_test (admin)",
+    "exportTimestamp": 0,
+    "loadLast": true
+  },
+  "owner": "amain",
+  "listed": false,
+  "name": "Correlations analysis on train_test (admin) (2022-02-18 07:50)",
+  "dashboardCreationId": "3uUzaMa",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1645213843470
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "amain"
+    },
+    "lastModifiedOn": 1645213843470
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

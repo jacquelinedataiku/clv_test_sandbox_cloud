@@ -1,0 +1,17 @@
+{
+  "gitReferences": {
+    "python": {
+      "remote": "https://github.com/cylee-dku/dss-function-lib.git",
+      "checkout": "refs/heads/main",
+      "remotePath": "coders-workshop",
+      "lastHash": "6aa081206e470a6e59e6f3f9a8c5a9dc85a0e360"
+    }
+  },
+  "pythonPath": [
+    "python"
+  ],
+  "rsrcPath": [
+    "R"
+  ],
+  "importLibrariesFromProjects": []
+}

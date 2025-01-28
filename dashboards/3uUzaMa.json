@@ -1,0 +1,377 @@
+{
+  "checklists": {
+    "checklists": []
+  },
+  "columnNumber": 36,
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1603992384679,
+    "versionNumber": 0
+  },
+  "customFields": {},
+  "listed": true,
+  "name": "Customer Lifetime Value - Coding - Short's default dashboard",
+  "owner": "admin",
+  "pages": [
+    {
+      "backgroundColor": "#ffffff",
+      "enableCrossFilters": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
+      },
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 18,
+              "left": 15,
+              "top": 0,
+              "width": 21
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "displayMode": "INSIGHT",
+            "insightId": "qgPc1Y9",
+            "insightType": "chart",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "autoPlayAnimation": true,
+              "showLegend": false,
+              "showTooltips": true,
+              "showXAxis": true,
+              "showYAxis": true
+            },
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "YES"
+            }
+          },
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 18,
+              "left": 0,
+              "top": 0,
+              "width": 15
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "displayMode": "INSIGHT",
+            "insightId": "MZZncJS",
+            "insightType": "chart",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "autoPlayAnimation": true,
+              "showLegend": false,
+              "showTooltips": true,
+              "showXAxis": true,
+              "showYAxis": true
+            },
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "YES"
+            }
+          }
+        ]
+      },
+      "id": "jwLZ8we",
+      "showTitle": true,
+      "title": "Revenue"
+    },
+    {
+      "backgroundColor": "#ffffff",
+      "enableCrossFilters": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
+      },
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 6,
+              "left": 3,
+              "top": 0,
+              "width": 30
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "displayMode": "INSIGHT",
+            "insightId": "XsH00rG",
+            "insightType": "eda",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {},
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "YES"
+            }
+          }
+        ]
+      },
+      "id": "BrMFKR8",
+      "showTitle": true,
+      "title": "Correlation analysis (Visual)"
+    },
+    {
+      "backgroundColor": "#ffffff",
+      "enableCrossFilters": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
+      },
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 27,
+              "left": 24,
+              "top": 0,
+              "width": 12
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "A7uqmJ6",
+            "insightType": "saved-model_report",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "advancedOptions": {},
+              "displayMode": "bc_confusion"
+            },
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "YES"
+            }
+          },
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 15,
+              "left": 12,
+              "top": 0,
+              "width": 9
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "hei4nzW",
+            "insightType": "saved-model_report",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "NO",
+            "tileParams": {
+              "advancedOptions": {},
+              "displayMode": "c_roc"
+            },
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "NO"
+            }
+          },
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 6,
+              "left": 3,
+              "top": 0,
+              "width": 6
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "JtNCWeq",
+            "insightType": "saved-model_report",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "NO",
+            "tileParams": {
+              "advancedOptions": {},
+              "displayMode": "summary"
+            },
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "NO"
+            }
+          },
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 12,
+              "left": 0,
+              "top": 15,
+              "width": 24
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "KbxkRll",
+            "insightType": "saved-model_report",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "YES",
+            "tileParams": {
+              "advancedOptions": {
+                "customViews": {
+                  "viewId": "model-fairness-view"
+                },
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "ip_country_code",
+                    "price_first_item_purchased",
+                    "campain",
+                    "ip_geopoint",
+                    "since_birth_days",
+                    "pages_visited",
+                    "gender",
+                    "ip",
+                    "is_id_ends_d"
+                  ]
+                }
+              },
+              "displayMode": "skins"
+            },
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "YES"
+            }
+          }
+        ]
+      },
+      "id": "DYCz7D6",
+      "showTitle": true,
+      "title": "Model in use"
+    },
+    {
+      "backgroundColor": "#ffffff",
+      "enableCrossFilters": true,
+      "filtersParams": {
+        "panelPosition": "TOP"
+      },
+      "grid": {
+        "tiles": [
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 6,
+              "left": 6,
+              "top": 0,
+              "width": 30
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "displayMode": "INSIGHT",
+            "insightId": "OLXSGg5",
+            "insightType": "scenario_last_runs",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "NO",
+            "tileParams": {
+              "displayMode": "DETAILED",
+              "range": "CURRENT_DAY"
+            },
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "NO"
+            }
+          },
+          {
+            "autoLoad": true,
+            "borderOptions": {
+              "color": "#D9D9D9",
+              "radius": 0,
+              "size": 1
+            },
+            "box": {
+              "height": 3,
+              "left": 0,
+              "top": 0,
+              "width": 6
+            },
+            "clickAction": "DO_NOTHING",
+            "displayMode": "INSIGHT",
+            "insightId": "4St76rv",
+            "insightType": "scenario_run_button",
+            "resizeImageMode": "FIT_SIZE",
+            "showTitle": "NO",
+            "tileParams": {
+              "buttonText": "Run Scenario Now",
+              "showLastRun": false
+            },
+            "tileType": "INSIGHT",
+            "titleOptions": {
+              "fontColor": "#000",
+              "fontSize": 13,
+              "showTitle": "NO"
+            }
+          }
+        ]
+      },
+      "id": "zDChSXX",
+      "showTitle": true,
+      "title": "Automation monitoring"
+    }
+  ],
+  "shortDesc": "This is the default dashboard of the Hands-on Workshop for coders.",
+  "showGrid": true,
+  "tags": [
+    "Hands-on workshop"
+  ],
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "sciaravino"
+    },
+    "lastModifiedOn": 1680820100778,
+    "versionNumber": 96
+  }
+}
