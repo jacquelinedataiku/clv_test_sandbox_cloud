@@ -13,7 +13,8 @@
   "flowOptions": {
     "virtualizable": false,
     "rebuildBehavior": "NORMAL",
-    "crossProjectBuildBehavior": "DEFAULT"
+    "crossProjectBuildBehavior": "DEFAULT",
+    "ignoreErrorStatusOnBuild": false
   },
   "readWriteOptions": {
     "preserveOrder": false,
@@ -111,6 +112,7 @@
     ],
     "userModified": true
   },
+  "typeSystemVersion": "V1",
   "dkuProperties": [],
   "metrics": {
     "probes": [
