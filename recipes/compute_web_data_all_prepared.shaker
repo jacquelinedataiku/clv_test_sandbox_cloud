@@ -153,8 +153,8 @@
       "disabled": true,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "",
-        "column": "formula_result",
+        "expression": "pages_visited \u003e ${pages_visited}",
+        "column": "numerical_variable",
         "errorColumn": ""
       },
       "alwaysShowComment": false
