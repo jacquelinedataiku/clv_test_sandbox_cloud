@@ -102,6 +102,8 @@
       "exportForNewBranch": false,
       "exportKnowledgeBanks": false,
       "exportEditableDatasets": true,
+      "exportPromptStudioHistories": false,
+      "exportNotebooks": true,
       "includedDatasetsData": [
         {
           "name": "web_data_all",
@@ -128,6 +130,7 @@
       "includedCodeStudios": [],
       "includedKnowledgeBanks": [],
       "includedLabelingTasks": [],
+      "includedPromptStudiosHistories": [],
       "shareAllInputDatasets": false,
       "exportForeignObjectsReferences": true
     }
@@ -164,6 +167,7 @@
       "zonesGraphRenderingAlgorithm": "DOT_OLDRANK",
       "zonesGraphConnectZones": true,
       "zonesGraphForJobs": true,
+      "respectTraversalOrder": false,
       "zonesManualPositioning": false
     },
     "gitCommitMode": "AUTO",
@@ -191,6 +195,14 @@
         "hard": -1
       },
       "attachmentBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "sqlNotebookResultSetBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "sqlScenarioResultSetBytes": {
         "soft": -1,
         "hard": -1
       }
@@ -269,10 +281,16 @@
           "progressDeadlineSeconds": 600,
           "hpa": false,
           "hpaTargetCPUPercent": 0,
+          "hpaTargetMemoryPercent": 0,
           "hpaMetrics": [],
           "hpaMinPods": 0,
           "hpaMaxPods": 0,
           "hpaAnnotations": []
+        },
+        "podDisruptionBudget": {
+          "enable": false,
+          "isMaxUnavailable": false,
+          "minAvailable": "50%"
         },
         "deploymentModifier": {
           "config": {}
@@ -281,7 +299,7 @@
     },
     "dkuProperties": []
   },
-  "name": "SC_CLV_TEST",
+  "name": "CLV_TEST",
   "imgPattern": 6,
   "metrics": {
     "probes": [],
