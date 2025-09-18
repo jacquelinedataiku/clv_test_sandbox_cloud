@@ -1,6 +1,20 @@
 {
-  "type": "join",
+  "type": "sql_query",
   "neverRecomputeExistingPartitions": false,
+  "params": {
+    "allowMultipleConnections": false,
+    "displayExecutionPlan": true,
+    "sqlPipelineParams": {
+      "pipelineAllowStart": true,
+      "pipelineAllowMerge": true
+    },
+    "variablesExpansionLoopConfig": {
+      "enabled": false,
+      "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
+      "replacements": []
+    },
+    "skipPrerunValidate": false
+  },
   "customMeta": {
     "kv": {}
   },
