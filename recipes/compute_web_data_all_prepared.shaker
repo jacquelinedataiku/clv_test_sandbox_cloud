@@ -1,6 +1,40 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "customer_id"
+      },
+      {
+        "d": true,
+        "name": "ip"
+      },
+      {
+        "d": true,
+        "name": "ip_geopoint"
+      },
+      {
+        "d": true,
+        "name": "ip_country_code"
+      },
+      {
+        "d": true,
+        "name": "pages_visited"
+      },
+      {
+        "d": true,
+        "name": "campain"
+      },
+      {
+        "d": true,
+        "name": "original_dataset"
+      },
+      {
+        "d": true,
+        "name": "is_id_ends_d"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 1,
@@ -28,6 +62,7 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
+  "columnOrder": [],
   "columnUseScientificNotationByName": {},
   "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
@@ -83,6 +118,7 @@
       "type": "FindReplace",
       "params": {
         "output": "",
+        "useDatasetForMapping": false,
         "mapping": [
           {
             "from": "new_visitors",
@@ -96,6 +132,18 @@
         "appliesTo": "SINGLE_COLUMN",
         "stopAfterFirstMatch": false,
         "matching": "FULL_STRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": true,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "val(${country_code_var})",
+        "column": "formula_result",
+        "errorColumn": ""
       },
       "alwaysShowComment": false
     }
@@ -140,13 +188,15 @@
     "customer_id": 127,
     "ip_geopoint": 190,
     "ip_region_hierarchy": 190,
-    "ip_region_code": 120
+    "ip_region_code": 120,
+    "formula_result": 120
   },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
     "scheme": "MEANING_AND_STATUS",
     "individualColumns": [],
+    "coloringGroups": [],
     "valueColoringMode": "HASH",
     "individualColumnsRules": []
   }
