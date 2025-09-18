@@ -14,3 +14,5 @@ SELECT
   FROM "PUBLIC"."node-093312e5_SC_CLV_GOVERN_EXAMPLE_CUSTOMERS_DATA_PREPARED" "customers_data_prepared"
   INNER JOIN "PUBLIC"."node-093312e5_SC_CLV_GOVERN_EXAMPLE_WEB_DATA_PREPARED" "web_data_prepared"
     ON "customers_data_prepared"."customer_id" = "web_data_prepared"."customer_id"
+  
+  WHERE "web_data_prepared"."ip_country_code" = '${country_code_var}'
