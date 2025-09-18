@@ -1,5 +1,5 @@
 {
-  "type": "S3",
+  "type": "Snowflake",
   "managed": true,
   "featureGroup": false,
   "formatType": "csv",
@@ -72,34 +72,37 @@
   },
   "tags": [],
   "params": {
-    "bucket": "se-sandbox-us",
-    "metastoreSynchronizationEnabled": true,
-    "metastoreDatabaseName": "dataiku",
-    "metastoreTableName": "${projectKey}_web_data_prepared",
-    "connection": "dataiku-managed-storage",
-    "path": "/ssYv203d2akci6aocmBLIzAN/${projectKey}/web_data_prepared",
+    "connection": "Snowflake",
     "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "ALL",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": []
-    },
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${NODE}_${projectKey}_WEB_DATA_PREPARED",
+    "schema": "PUBLIC",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeDescriptionsAsSQLComment": true,
+    "noDropOnSchemaMismatch": false,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "datetimenotzReadMode": "AS_IS",
+    "dateonlyReadMode": "AS_IS",
     "variablesExpansionLoopConfig": {
       "enabled": false,
       "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
       "replacements": []
-    }
+    },
+    "sparkJdbcAccess": "NONE",
+    "numPartitions": -1
   },
   "schema": {
     "columns": [
-      {"name":"customer_id","type":"string"},
-      {"name":"ip","type":"string"},
-      {"name":"ip_geopoint","type":"string"},
-      {"name":"ip_country_code","type":"string"},
+      {"name":"customer_id","type":"string","maxLength":16777216},
+      {"name":"ip","type":"string","maxLength":16777216},
+      {"name":"ip_geopoint","type":"string","maxLength":16777216},
+      {"name":"ip_country_code","type":"string","maxLength":16777216},
       {"name":"pages_visited","type":"double"},
       {"name":"campain","type":"boolean"},
-      {"name":"original_dataset","type":"string"},
+      {"name":"original_dataset","type":"string","maxLength":16777216},
       {"name":"is_id_ends_d","type":"bigint"}
     ],
     "userModified": true

@@ -1,5 +1,5 @@
 {
-  "type": "S3",
+  "type": "Snowflake",
   "managed": true,
   "featureGroup": false,
   "formatType": "csv",
@@ -72,33 +72,36 @@
   },
   "tags": [],
   "params": {
-    "bucket": "se-sandbox-us",
-    "metastoreSynchronizationEnabled": true,
-    "metastoreDatabaseName": "dataiku",
-    "metastoreTableName": "${projectKey}_customers_data_prepared",
-    "connection": "dataiku-managed-storage",
-    "path": "/ssYv203d2akci6aocmBLIzAN/${projectKey}/customers_data_prepared",
+    "connection": "Snowflake",
     "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "ALL",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": []
-    },
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${NODE}_${projectKey}_CUSTOMERS_DATA_PREPARED",
+    "schema": "PUBLIC",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeDescriptionsAsSQLComment": true,
+    "noDropOnSchemaMismatch": false,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "datetimenotzReadMode": "AS_IS",
+    "dateonlyReadMode": "AS_IS",
     "variablesExpansionLoopConfig": {
       "enabled": false,
       "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
       "replacements": []
-    }
+    },
+    "sparkJdbcAccess": "NONE",
+    "numPartitions": -1
   },
   "schema": {
     "columns": [
-      {"name":"customer_id","type":"string"},
+      {"name":"customer_id","type":"string","maxLength":16777216},
       {"name":"age","type":"bigint"},
       {"name":"price_first_item_purchased","type":"double"},
-      {"name":"gender","type":"string"},
+      {"name":"gender","type":"string","maxLength":16777216},
       {"name":"revenue","type":"bigint"},
-      {"name":"original_dataset","type":"string","meaning":"sourceofdata"}
+      {"name":"original_dataset","type":"string","meaning":"sourceofdata","maxLength":16777216}
     ],
     "userModified": true
   },
