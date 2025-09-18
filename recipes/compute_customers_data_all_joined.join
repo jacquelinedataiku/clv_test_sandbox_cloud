@@ -138,7 +138,7 @@
       }
     }
   },
-  "engineType": "DSS",
+  "engineType": "SQL",
   "virtualInputs": [
     {
       "outputColumnsSelectionMode": "AUTO_NON_CONFLICTING",
@@ -168,7 +168,8 @@
         "columns": [
           {
             "name": "customer_id",
-            "type": "string"
+            "type": "string",
+            "maxLength": 16777216
           },
           {
             "name": "age",
@@ -180,7 +181,8 @@
           },
           {
             "name": "gender",
-            "type": "string"
+            "type": "string",
+            "maxLength": 16777216
           },
           {
             "name": "revenue",
@@ -189,19 +191,23 @@
           {
             "meaning": "sourceofdata",
             "name": "original_dataset",
-            "type": "string"
+            "type": "string",
+            "maxLength": 16777216
           },
           {
             "name": "ip",
-            "type": "string"
+            "type": "string",
+            "maxLength": 16777216
           },
           {
             "name": "ip_geopoint",
-            "type": "string"
+            "type": "string",
+            "maxLength": 16777216
           },
           {
             "name": "ip_country_code",
-            "type": "string"
+            "type": "string",
+            "maxLength": 16777216
           },
           {
             "name": "pages_visited",
