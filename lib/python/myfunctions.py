@@ -1,5 +1,8 @@
 import dataiku
 
+def addition(x,y):
+    return(x+y)
+
 def create_target(row, v):
     revenue = row['revenue']
     if revenue >= v:
